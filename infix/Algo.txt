@@ -1,0 +1,43 @@
+Infix to postfix:
+
+create sn Empty Stack
+And a string postfix to store the resultant postfix Expression
+
+iterate through charecters in infix string input:
+
+Case-1:
+    if current charecter is alphanumeric (a-z,A-Z,0-9)
+    directly add it to postfix Expression
+
+case-2:
+    if current charecter is '(' push it into the Stack
+
+case-3:
+    if current charecter is ')'
+    Pop from stack and add to postfix Expression
+        Until '(' is found
+case-4:
+    if current charecter is operator (+,-,*,/)
+
+    while stack is not Empty and precedence of top >= precedence of current charecter
+        pop from stack and add it to postfix Expression 
+        
+    push it into the stack
+
+case-5:
+    still the stack is not Empty
+        pop all charecters from stack and add it to postfix Expression.
+
+Then you can return the final postfix Expression.
+
+Infix to Prefix:
+
+step-1:
+    reverse the given infix Expression
+step-2:
+    swap the brackets
+step-3:
+    Apply postfix algorithm on Modified string
+    in this case change >= to > in while loop when we are checking with precedence
+step-4:
+    reverse the result and it becomes final Prefix Expression.
