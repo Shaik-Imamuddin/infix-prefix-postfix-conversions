@@ -1,0 +1,47 @@
+Prefix to infix:
+
+Create an Empty stack
+
+Iterate through the characters of the prefix expression from right to left(reverse order)
+
+case-1:
+    if the current character is alphanumeric(a-z,A-Z,0-9)
+    push it into the stack
+
+case-2:
+    if the current character is operator(+,-,*,/)
+    pop top of stack and store in op1
+    again pop top of stack and store in op2
+
+    res = form a new String "(op1+current character+op2)"
+    push res expression back into the stack
+
+case-3:
+    After iterating through all characters of the prefix expression
+    if the stack is not Empty
+    pop the top element of the stack
+    This will be the final infix expression.
+
+Prefix to postfix:
+
+Create an Empty stack
+
+Iterate through the characters of the prefix expression from right to left(reverse order)
+
+case-1:
+    if the current character is alphanumeric(a-z,A-Z,0-9)
+    push it into the stack
+
+case-2:
+    if the current character is operator(+,-,*,/)
+    pop top of stack and store in op1
+    again pop top of stack and store in op2
+    
+    res = form a new String "op1+op2+current character"
+    push res expression back into the stack
+
+case-3:
+    After iterating through all characters of the prefix expression
+    if the stack is not Empty
+    pop the top element of the stack
+    This will be the final postfix expression.
