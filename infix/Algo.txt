@@ -1,32 +1,32 @@
 Infix to postfix:
 
-create sn Empty Stack
+create an Empty Stack
 And a string postfix to store the resultant postfix Expression
 
-iterate through charecters in infix string input:
+iterate through characters in infix string input:
 
 Case-1:
-    if current charecter is alphanumeric (a-z,A-Z,0-9)
+    if current character is alphanumeric (a-z,A-Z,0-9)
     directly add it to postfix Expression
 
 case-2:
-    if current charecter is '(' push it into the Stack
+    if current character is '(' push it into the Stack
 
 case-3:
-    if current charecter is ')'
+    if current character is ')'
     Pop from stack and add to postfix Expression
         Until '(' is found
 case-4:
-    if current charecter is operator (+,-,*,/)
+    if current character is operator (+,-,*,/)
 
-    while stack is not Empty and precedence of top >= precedence of current charecter
+    while stack is not Empty and precedence of top >= precedence of current character
         pop from stack and add it to postfix Expression 
         
     push it into the stack
 
 case-5:
     still the stack is not Empty
-        pop all charecters from stack and add it to postfix Expression.
+        pop all characters from stack and add it to postfix Expression.
 
 Then you can return the final postfix Expression.
 
